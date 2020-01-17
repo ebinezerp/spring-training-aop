@@ -1,0 +1,45 @@
+
+Cross cutting
+
+Aspect -> 
+
+Advice: What it performs. Job of the Aspect - methods
+Joinpoint: point where to place the advice.
+Pointcut: To which joinpoint, which advice should execute.
+Target: To which object, adivce is applicable. Class that perform the primary logic is the target.
+proxy -> wrapper aroung target , to intercept method calling
+
+
+
+a. Before advice. - @Before
+    before execution of joinpoint methods.
+b. After advice. - @After
+    after execution of joinpoint methods.
+c. After Returning advice. 
+    Olny after execution of joinpoint method successfully/after throwing an exception.
+d. After Throwing advice.
+    Only after , when joinpoint method throws exection.
+e. Around Advice.
+   Before and After the joinpoint method executes.
+
+
+<aop:aspectj-autoproxy />
+
+@Before("execution(pattern)")
+
+
+public void addProduct(Product product);
+protected void addProduct(Product product);
+public boolean addProduct(Product product);
+public boolean addCustomer(Customer customer);
+
+* * addProduct(*);
+* * add*(*)
+
+
+
+aspectjrt - runtime env 
+aspectjweaver - ascpet related annotation are existed 
+
+
+
